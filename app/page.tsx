@@ -366,6 +366,193 @@ export default function Home() {
 
       <Divider />
 
+{/* HOME LAB */}
+<section>
+  <SectionTitle id="homelab" title="Home Lab Architecture" />
+
+  <div className="mt-12 grid lg:grid-cols-[1.3fr_0.7fr] gap-8 items-stretch">
+    {/* LEFT: NETWORK MAP */}
+    <div
+      className={`${CARD} relative overflow-hidden hover:shadow-[0_0_60px_rgba(0,255,160,0.18)] hover:-translate-y-1 transition-all duration-300`}
+    >
+      {/* background grid */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,255,160,0.08)_1px,transparent_1px)] bg-[size:32px_32px] opacity-60" />
+
+      <div className="relative">
+        <h3 className="text-xl font-semibold text-green-300">
+          Virtual SOC Network Topology
+        </h3>
+
+        <p className="mt-3 text-white/70 leading-relaxed max-w-2xl">
+          Isolated virtual environment designed to simulate attacker behavior,
+          network controls, endpoint activity, and centralized detection for SOC
+          practice.
+        </p>
+
+        {/* MAP */}
+        <div className="mt-8 grid grid-cols-3 gap-6 items-center">
+          {/* ATTACKER */}
+          <div className="rounded-2xl border border-green-400/20 bg-black/60 p-5">
+            <div className="flex items-center justify-between">
+              <span className="text-green-200 font-semibold">Kali Linux</span>
+              <span className="text-xs text-white/50 font-mono">Attacker</span>
+            </div>
+
+            <div className="mt-3 text-sm text-white/70">
+              Simulated offensive traffic:
+              <ul className="mt-2 space-y-1">
+                <li>• reconnaissance & scanning</li>
+                <li>• authentication attempts</li>
+                <li>• payload simulation</li>
+              </ul>
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Tag>Nmap</Tag>
+              <Tag>Metasploit</Tag>
+              <Tag>Burp</Tag>
+            </div>
+          </div>
+
+          {/* FIREWALL */}
+          <div className="flex flex-col items-center gap-3">
+            <div className="text-green-400 text-xs font-mono">traffic filtered</div>
+
+            <div className="rounded-2xl border border-green-400/30 bg-emerald-950/40 p-5 w-full">
+              <div className="flex items-center justify-between">
+                <span className="text-green-200 font-semibold">pfSense</span>
+                <span className="text-xs text-white/50 font-mono">Firewall</span>
+              </div>
+
+              <div className="mt-3 text-sm text-white/70">
+                Network enforcement & logging:
+                <ul className="mt-2 space-y-1">
+                  <li>• segmentation & zones</li>
+                  <li>• allow / deny rules</li>
+                  <li>• NAT & traffic logs</li>
+                </ul>
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Tag>Rules</Tag>
+                <Tag>Logging</Tag>
+                <Tag>Segmentation</Tag>
+              </div>
+            </div>
+
+            <div className="text-green-400 text-xs font-mono">
+              logs forwarded
+            </div>
+          </div>
+
+          {/* DEFENSE */}
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-green-400/20 bg-black/60 p-5">
+              <div className="flex items-center justify-between">
+                <span className="text-green-200 font-semibold">Windows VM</span>
+                <span className="text-xs text-white/50 font-mono">Endpoint</span>
+              </div>
+
+              <div className="mt-3 text-sm text-white/70">
+                Event generation & telemetry:
+                <ul className="mt-2 space-y-1">
+                  <li>• authentication events</li>
+                  <li>• process execution</li>
+                  <li>• network connections</li>
+                </ul>
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Tag>Event Logs</Tag>
+                <Tag>Sysmon</Tag>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-green-400/20 bg-black/60 p-5">
+              <div className="flex items-center justify-between">
+                <span className="text-green-200 font-semibold">SIEM</span>
+                <span className="text-xs text-white/50 font-mono">Detection</span>
+              </div>
+
+              <div className="mt-3 text-sm text-white/70">
+                Centralized monitoring & alerts:
+                <ul className="mt-2 space-y-1">
+                  <li>• log ingestion</li>
+                  <li>• detection rules</li>
+                  <li>• alert triage</li>
+                </ul>
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Tag>Splunk</Tag>
+                <Tag>Chronicle</Tag>
+                <Tag>MITRE</Tag>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FOOTER */}
+        <div className="mt-8 grid sm:grid-cols-3 gap-3 text-xs text-white/60">
+          <div className="rounded-xl border border-green-400/15 bg-black/40 px-4 py-3">
+            <span className="text-green-300 font-mono">Input:</span> simulated attacks
+          </div>
+          <div className="rounded-xl border border-green-400/15 bg-black/40 px-4 py-3">
+            <span className="text-green-300 font-mono">Output:</span> alerts & timelines
+          </div>
+          <div className="rounded-xl border border-green-400/15 bg-black/40 px-4 py-3">
+            <span className="text-green-300 font-mono">Goal:</span> SOC decision practice
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* RIGHT: LEGEND / WHAT THIS PROVES */}
+    <div
+      className={`${CARD} hover:shadow-[0_0_60px_rgba(0,255,160,0.18)] hover:-translate-y-1 transition-all duration-300`}
+    >
+      <h3 className="text-xl font-semibold text-green-300">
+        What This Lab Demonstrates
+      </h3>
+
+      <div className="mt-5 space-y-4 text-white/75">
+        <div className="rounded-2xl border border-green-400/15 bg-black/40 p-5">
+          <div className="font-semibold text-green-200">End-to-End Visibility</div>
+          <p className="mt-2 text-sm">
+            From attacker activity through firewall enforcement to endpoint
+            telemetry and SIEM alerts.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-green-400/15 bg-black/40 p-5">
+          <div className="font-semibold text-green-200">SOC Workflow</div>
+          <p className="mt-2 text-sm">
+            Alert triage, evidence correlation, MITRE mapping, and response notes.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-green-400/15 bg-black/40 p-5">
+          <div className="font-semibold text-green-200">Defensive Thinking</div>
+          <p className="mt-2 text-sm">
+            Validating detections, tuning noise, and confirming expected network behavior.
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-6 flex flex-wrap gap-2">
+        <Tag>Virtualization</Tag>
+        <Tag>Network Security</Tag>
+        <Tag>SOC Practice</Tag>
+        <Tag>Detection Engineering</Tag>
+      </div>
+
+      <div className="mt-6 text-sm text-white/50">
+        Detailed write-up: <span className="text-green-200/90">coming soon →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
   
 {/* SKILLS */}
 <section>
