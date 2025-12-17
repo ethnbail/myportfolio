@@ -1,3 +1,8 @@
+
+import Projects from "./components/Projects";
+
+import Image from "next/image";
+
 const CARD =
   "rounded-2xl border border-green-400/20 bg-black/60 backdrop-blur p-6 shadow-[0_0_30px_rgba(0,255,160,0.12)]";
 
@@ -172,69 +177,95 @@ function YouTubeSection() {
 export default function Home() {
   return (
     <main className="max-w-6xl mx-auto px-8 py-12 space-y-20">
-      {/* HERO / TITLE PAGE */}
-      <section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden rounded-3xl border border-green-400/20 bg-black/40 backdrop-blur p-10 shadow-[0_0_60px_rgba(0,255,160,0.10)]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,255,160,0.12)_1px,transparent_1px)] bg-[size:40px_40px]" />
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-green-400/10 blur-3xl" />
-        <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-green-400/10 blur-3xl" />
+{/* HERO / TITLE PAGE */}
+<section className="min-h-[80vh] flex items-center justify-center relative overflow-hidden rounded-3xl border border-green-400/20 bg-black/40 backdrop-blur p-10 shadow-[0_0_60px_rgba(0,255,160,0.10)]">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,255,160,0.12)_1px,transparent_1px)] bg-[size:40px_40px]" />
+  <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-green-400/10 blur-3xl" />
+  <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-green-400/10 blur-3xl" />
 
-        <div className="relative z-10 text-center max-w-3xl">
-          <div className="inline-block mb-6 px-4 py-1 rounded-full border border-green-400/30 text-green-300 font-mono text-sm">
-            $ whoami
-          </div>
+  <div className="relative z-10 text-center max-w-3xl">
+    <div className="inline-block mb-6 px-4 py-1 rounded-full border border-green-400/30 text-green-300 font-mono text-sm">
+      $ whoami
+    </div>
 
-          <h1 className="text-6xl font-bold tracking-tight text-green-400">
-            ETHAN ANTHONY BAILEY
-          </h1>
+    <h1 className="text-6xl font-bold tracking-tight text-green-400">
+      ETHAN ANTHONY BAILEY
+    </h1>
 
-          <p className="mt-4 text-xl text-white/70">
-            Cybersecurity Student • Security+ • SOC & SIEM Focus
-          </p>
+    <p className="mt-4 text-xl text-white/70">
+      Cybersecurity Student • Security+ • SOC & SIEM Focus
+    </p>
 
-          <div className="mt-10 rounded-2xl border border-green-400/30 bg-black/70 backdrop-blur p-6 shadow-[0_0_40px_rgba(0,255,160,0.25)] text-left font-mono text-sm text-white/80">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="w-3 h-3 bg-red-400 rounded-full" />
-              <span className="w-3 h-3 bg-yellow-400 rounded-full" />
-              <span className="w-3 h-3 bg-green-400 rounded-full" />
-            </div>
+    <div className="mt-10 rounded-2xl border border-green-400/30 bg-black/70 backdrop-blur p-6 shadow-[0_0_40px_rgba(0,255,160,0.25)] text-left font-mono text-sm text-white/80">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-3 h-3 bg-red-400 rounded-full" />
+        <span className="w-3 h-3 bg-yellow-400 rounded-full" />
+        <span className="w-3 h-3 bg-green-400 rounded-full" />
+      </div>
 
-            <p>
-              <span className="text-green-400">$</span> ./get_profile.sh
-            </p>
-            <p className="mt-2">Name: Ethan Anthony Bailey</p>
-            <p>Role: Cybersecurity Student</p>
-            <p>Focus: SOC Operations, Detection, Automation</p>
-            <p>Certifications: CompTIA Security+</p>
-            <p className="mt-2">
-              Status: Seeking internship / entry-level cyber role
-            </p>
-            <p className="mt-2 text-green-400">$ _</p>
-          </div>
+      <p>
+        <span className="text-green-400">$</span> ./get_profile.sh
+      </p>
+      <p className="mt-2">Name: Ethan Anthony Bailey</p>
+      <p>Role: Cybersecurity Student</p>
+      <p>Focus: SOC Operations, Detection, Automation</p>
+      <p>Certifications: CompTIA Security+</p>
+      <p className="mt-2">
+        Status: Seeking internship / entry-level cyber role
+      </p>
+      <p className="mt-2 text-green-400">$ _</p>
+    </div>
 
-          <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            <a
-              href="#projects"
-              className="px-6 py-3 rounded-xl border border-green-400/40 bg-green-400/10 text-green-200 hover:bg-green-400/20"
-            >
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 rounded-xl border border-white/20 text-white/80 hover:bg-white/10"
-            >
-              Contact
-            </a>
-            <a
-              href="https://github.com/ethnbail"
-              target="_blank"
-              rel="noreferrer"
-              className="px-6 py-3 rounded-xl border border-green-400/25 text-green-200/90 hover:bg-green-400/10"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </section>
+    {/* Buttons */}
+    <div className="mt-8 flex justify-center gap-4 flex-wrap">
+      <a
+        href="#projects"
+        className="px-6 py-3 rounded-xl border border-green-400/40 bg-green-400/10 text-green-200 hover:bg-green-400/20"
+      >
+        View Projects
+      </a>
+      <a
+        href="#contact"
+        className="px-6 py-3 rounded-xl border border-white/20 text-white/80 hover:bg-white/10"
+      >
+        Contact
+      </a>
+      <a
+        href="https://github.com/ethnbail"
+        target="_blank"
+        rel="noreferrer"
+        className="px-6 py-3 rounded-xl border border-green-400/25 text-green-200/90 hover:bg-green-400/10"
+      >
+        GitHub
+      </a>
+    </div>
+
+ {/* EAB Logo */}
+<div className="mt-10 flex justify-center">
+  <div className="relative group">
+    {/* glow */}
+    <div className="absolute inset-0 rounded-2xl bg-green-400/20 blur-xl group-hover:bg-green-400/30 transition" />
+
+    {/* logo container */}
+    <div className="relative h-35 w-35 rounded-2xl border border-green-400/30 bg-black/60 backdrop-blur flex items-center justify-center">
+      <Image
+        src="/eab-logo.png"
+        alt="EAB Cybersecurity Logo"
+        width={128}
+        height={128}
+        className="object-contain transition-transform duration-300 group-hover:scale-105"
+        priority
+      />
+    </div>
+  </div>
+</div>
+
+<p className="mt-3 text-center font-mono text-xs text-green-300/70">
+
+</p>
+
+  </div>
+</section>
 
       <Divider />
 
@@ -368,7 +399,7 @@ export default function Home() {
 
 {/* HOME LAB */}
 <section>
-  <SectionTitle id="homelab" title="Home Lab Architecture" />
+  <SectionTitle id="homelab" title="Lab Architecture" />
 
   <div className="mt-12 grid lg:grid-cols-[1.3fr_0.7fr] gap-8 items-stretch">
     {/* LEFT: NETWORK MAP */}
@@ -650,7 +681,7 @@ export default function Home() {
         </div>
 
         {/* Row 3 */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justifsy-between">
           <span>Linux Hardening</span>
           <span className="text-green-300 font-mono text-xs">supporting</span>
         </div>
@@ -668,87 +699,8 @@ export default function Home() {
 </section>
 
 {/* PROJECTS */}
-<section id="projects">
-  <h2 className="text-4xl font-bold mb-10">
-    <span className="text-green-400 mr-2">#</span>
-    Projects
-  </h2>
 
-  <div className="grid md:grid-cols-2 gap-6 items-stretch">
-    {[
-      {
-        title: "SIEM SOC Dashboard (Splunk)",
-        body:
-          "Dashboards for authentication anomalies and brute-force patterns. Built a simple triage flow with alert context, severity cues, and follow-up steps.",
-        tags: ["Splunk", "Dashboards", "Detection", "Triage"],
-        slug: "splunk-soc-dashboard",
-      },
-      {
-        title: "Incident Response Automation (Cortex XSOAR)",
-        body:
-          "Created playbooks to automate repetitive response steps including enrichment, notification, and case workflow for simulated incidents.",
-        tags: ["XSOAR", "Automation", "IR", "Playbooks"],
-        slug: "xsoar-ir-automation",
-      },
-      {
-        title: "Honeypot Deployment & Analysis",
-        body:
-          "Deployed honeypots to observe attacker behavior, extract indicators of compromise, and document common scanning and credential attempts.",
-        tags: ["Honeypot", "IOCs", "Linux", "Threat Intel"],
-        slug: "honeypot-analysis",
-      },
-      {
-        title: "Linux Security Hardening Lab",
-        body:
-          "Hardened a Linux host using SSH best practices, firewall rules, and baseline checks with validation steps.",
-        tags: ["Linux", "Hardening", "SSH", "Firewall"],
-        slug: "linux-hardening",
-      },
-    ].map((p) => (
-      <div
-        key={p.title}
-        className="h-full flex flex-col rounded-2xl border border-green-400/20 bg-black/60 backdrop-blur p-6 shadow-[0_0_30px_rgba(0,255,160,0.10)] hover:shadow-[0_0_55px_rgba(0,255,160,0.18)] hover:-translate-y-1 transition-all duration-300"
-      >
-        {/* Header */}
-        <div className="flex items-start justify-between gap-4">
-          <h3 className="text-xl font-semibold text-green-300">
-            {p.title}
-          </h3>
-          <span className="text-xs text-white/40">Lab</span>
-        </div>
-
-        {/* Body */}
-        <p className="mt-3 text-white/75 leading-relaxed">
-          {p.body}
-        </p>
-
-        {/* Tags */}
-        <div className="mt-4 flex flex-wrap gap-2">
-          {p.tags.map((t) => (
-            <span
-              key={t}
-              className="px-3 py-1 rounded-full border border-green-400/20 bg-green-400/10 text-white/75 text-sm"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-
-        {/* Footer pinned to bottom */}
-        <div className="mt-auto pt-6">
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-green-400/30 to-transparent mb-3" />
-
-          <a
-            href={`/projects/${p.slug}`}
-            className="text-sm text-green-300 hover:text-green-200 underline underline-offset-4"
-          >
-            View write-up →
-          </a>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
+<Projects />
 
 
       <Divider />
@@ -916,7 +868,7 @@ export default function Home() {
             Chaffey College
           </h3>
           <p className="text-white/60 mt-1">
-            Associate Degree — Computer Science
+            Computer Science
           </p>
           <p className="text-white/50 text-sm mt-1">2023 – 2025</p>
 
